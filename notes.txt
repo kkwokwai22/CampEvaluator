@@ -1,0 +1,123 @@
+#yelpcamp
+
+*add landing page
+*add campgrounds page that lists all campgrounds
+
+each campground has:
+
+*name
+*image
+
+
+#Layout and basic Styling 
+
+*create our header and footer partials
+*add in bootstrap 
+
+#Creating New Campgrounds
+* Set up new campground POST route
+* Add in body-parser
+* setup route to show form
+* add basic unstyled form 
+
+#Style the campgrounds page
+*add a better header/title
+*make campgrounds display in a grid 
+
+#Style the NavBar and Form 
+* Add a navbar to all templates
+* *Style the new campground form 
+
+#Intro to Databases
+* what is a database
+*   a collection of information/data
+*   has an interface
+* SQL (relational) vs. NoSQL (non-relational)
+
+#dataBases 
+
+##Intro to MongoDB
+* what is mongoDB
+* why are we using it?
+* let's install it 
+
+// we need to type this first in terminal sudo apt-get install -y mongodb-org
+https://community.c9.io/t/setting-up-mongodb/1717
+
+if it ever stop just type ./mongodb and it will run again (make sure in right directory)
+
+#Our First Mongo Commands 
+*mongod --- start running database
+*mongo ---- open the shell
+*help  ---- give us list of basic command from mongo
+*show dbs
+*use   ----- the way we make database - use "name of database"
+*insert ----- a command to insert data to dog collections (db.dogs.insert())
+                WriteResult({ "nInserted" : 1 })
+*find  ------ if you want to find all (dataname) in database -----  
+              db.dogs.find() -- give you all
+              db.dogs.find({name : "rusty"})
+*update -----  toupdate the data --- db.dogs.update({name: "Rusty"} , {$set: {name: "Tater", isCute: true}}) 
+*remove ------ remove the data ---- > db.dogs.remove({breed: "corgi"})
+                                      db.dogs.remove({breed: "Mutt"}).limit(number)
+                                      
+               
+              
+#Mongoose
+* what is mongoose?
+* why are we using it ?
+* interact with a mongo Database using Mongoose 
+
+#Add Mongoose
+* Install and configure Mongoose
+* Setup campground model
+* Use campground model inside of our routes
+
+#Show page
+*Review the RESTful routes we've seen so far
+*add description to our campground model
+*Show db.collection.drop()
+*Add a show route/template 
+
+RESTful ROUTES
+  
+Name      url          verb         desc.
+------------------------------------------
+INDEX     /dogs         GET         Display a list of all dog
+NEW       /dogs/new     GET         Display form to make a new dog
+CREATE    /dogs         POST        add new dog to DB 
+Show      /dogs/:id     GET         show infor about one dog
+Edit      /dogs/:id/editGET         show edit form for one dog
+Update    /dogs/:id     PUT         Update a particular dog, then redirect somewhere
+Destroy   /dogs/:id     DELETE      Delete a particular dog, then redirect somewhere
+
+
+#RESTful Routing 
+
+##Introduction
+* Define REST and explaining WHY it matters
+* List all 7 RESTful routes
+* Show example of RESTful routing in practice 
+
+REST - a mapping between HTTP and CRUD 
+
+CREAT READ UPDATE AND DESTORY == CRUD 
+
+Blog -- relayable 
+
+Create /
+READ   /allBlogs
+UPDATE /updateBlog/:id
+DELETE /destroyBlog/:id 
+
+
+
+
+
+
+
+
+
+
+
+
